@@ -1,0 +1,15 @@
+.TopBar{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background-color:rgb(41, 39, 39);
+}
+
+.pageTitle{
+    color: white;
+    margin-right: 45%;
+    font-size: 35px;
+    font-family: Marvel;
+}

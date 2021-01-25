@@ -1,0 +1,25 @@
+.card{
+    margin-top:20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 200px;
+    width: 120px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+
+}
+
+.title:hover, .image:hover{
+    cursor: pointer;
+}
+
+.image{
+    width: 150px;
+    height:190px;
+}
+
+.title{
+    font-size:15px;
+    width:180px;
+    color: white;
+}

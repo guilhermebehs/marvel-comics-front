@@ -1,0 +1,57 @@
+.modal-dialog{
+    margin-left: 8%;
+    position: fixed;
+    background-color: white;
+    padding: 15px;
+    width: 50%;
+    height: 45%;
+    border: 1px solid black; 
+    transform: translate(20%,   0%);
+}
+
+.imageDetails{
+    margin-right: 50px;
+}
+
+.imageDetails img{
+    width: 150px;
+    height: 200px;
+}
+
+.priceDetails{
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.titleDetails{
+    margin-bottom: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.buyButton{
+    width: 55%;
+    height: 28%;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(to right, rgba(2, 0, 0, 0), rgb(236, 219, 58));
+    border-radius: 5px;
+}
+.closeButton{
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    margin-left: 95%;
+}
+
+.info{
+    overflow-y: scroll;
+    height: 100px;
+    border-bottom: 3px solid #bbb;
+}
