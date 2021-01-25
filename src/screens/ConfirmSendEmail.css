@@ -1,0 +1,21 @@
+.modal-dialog-confirm{
+    margin-left: 8%;
+    position: fixed;
+    background-color: white;
+    padding: 15px;
+    width: 20%;
+    height: 15%;
+    border: 1px solid black; 
+    transform: translate(-100%,   60%);
+}
+
+.closeButton{
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    margin-left: 95%;
+}
+
+.sendButton{
+    font-family: 'Lato', sans-serif;
+}

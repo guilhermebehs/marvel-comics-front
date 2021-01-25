@@ -8,7 +8,8 @@ import ComicCard from './ComicCard';
 import { connect, ConnectedProps } from 'react-redux';
 
 const mapState = (state: any) => ({
-       refreshList: state.comic.refreshList
+       refreshList: state.comic.refreshList,
+       filter: state.comic.filter,
   })
 
   const connector = connect(mapState)
@@ -35,13 +36,13 @@ const mapState = (state: any) => ({
     useEffect(()=>{
         setListInitalState();
         getData();
-    },[props.refreshList])
+    },[props.refreshList, props.filter])
 
    
     async function getData(refreshParameters: boolean = false){
         setShowLoadingIcon(true);
         const comicService = new ComicsService();
-        const data:Array<IComic> = await comicService.getAll(limit, offset);
+        const data:Array<IComic> = await comicService.getAll(limit, offset, props.filter);
         const list = data.map((comic:IComic)=>{          
             return (
                 <ComicCard comic={comic}/>

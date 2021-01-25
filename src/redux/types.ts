@@ -3,7 +3,10 @@ import { IComic } from "../dto/IComic";
 export const ADD_COMICS_TO_SEND = "ADD_COMICS_TO_SEND";
 export const REMOVE_COMICS_TO_SEND = "REMOVE_COMICS_TO_SEND"; 
 export const CLEAN_COMICS_TO_SEND = "CLEAN_COMICS_TO_SEND"; 
-export const REFRESH_LIST = "REFRESH_LIST"; 
+export const REFRESH_LIST = "REFRESH_LIST";
+export const FILTER = "FILTER"; 
+export const CLEAN_FILTER = "CLEAN_FILTER"; 
+
 
 
 
@@ -29,12 +32,27 @@ export  interface RefreshListAction{
     payload:IComic;
 }
 
+export  interface FilterAction{
+    type: typeof FILTER;
+    payload:string;
+}
+
+export  interface CleanFilterAction{
+    type: typeof CLEAN_FILTER;
+    payload:string;
+}
+
 export interface ComicState{
     comicsToSend: Array<IComic>,
-    refreshList: boolean
+    refreshList: boolean,
+    filter: string
 }
+
+
 
 export type ComicTypes = AddComicsToSendAction | 
                         RemoveComicsToSendAction | 
                         CleanComicsToSendAction |
-                        RefreshListAction
+                        RefreshListAction |
+                        FilterAction |
+                        CleanFilterAction

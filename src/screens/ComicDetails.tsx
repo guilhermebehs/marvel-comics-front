@@ -29,7 +29,7 @@ export default (props:ModalParams) =>{
     }
 
     return (
-      <Modal.Dialog >
+      <Modal.Dialog className="modal-dialog-details" >
        <Modal.Body>
        <button className="closeButton" onClick={()=> props.close()}>X</button>
        <h2 className="titleDetails">{title}</h2>

@@ -1,10 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React from 'react';
+import React, { useState } from 'react';
 import {connect, ConnectedProps} from 'react-redux';
 import './DropdownMenu.css';
 import {GrMenu} from 'react-icons/gr';
 import { Dropdown } from 'react-bootstrap';
-import EmailService from '../services/EmailService';
+import ConfirmSendEmail from '../screens/ConfirmSendEmail';
 
 const mapState = (state: any) => ({
    comicsToSend: state.comic.comicsToSend,
@@ -24,19 +24,23 @@ const mapState = (state: any) => ({
 
 const DropdownMenu = (props:Props) =>{
 
+   const [openConfirm, setOpenConfirm] = useState<boolean>(false);
+
     function send(){
        if(props.comicsToSend.length > 0){
-          const emailService = new EmailService();
-          emailService.send('saintjimmyrs@hotmail.com', props.comicsToSend)
-          props.cleanComicsToSend();
-          props.setRefreshList();
-          alert('HQs enviados por email')
+         setOpenConfirm(true);
        }
     }
 
+     function itemDisabled(): boolean{
+         return props.comicsToSend.length === 0;
+     }
+
     return (<>
-    
-            <Dropdown >
+     { openConfirm &&
+      <ConfirmSendEmail close={setOpenConfirm} />
+     }
+       <Dropdown >
          <Dropdown.Toggle variant="success" id="dropdown-basic">
          <div className="Dropdown">
                <span >
@@ -47,7 +51,9 @@ const DropdownMenu = (props:Props) =>{
          
          <Dropdown.Menu>
          <Dropdown.Item ><div className="arrow-up"></div></Dropdown.Item>
-         <Dropdown.Item  onClick={()=>{ send()}}>Enviar</Dropdown.Item>
+         <Dropdown.Item disabled={itemDisabled()}  
+           style={{color: itemDisabled() ? 'grey': 'white'}}
+         onClick={()=>{ send()}}>Enviar</Dropdown.Item>
          <Dropdown.Item >Preferências </Dropdown.Item> 
          <Dropdown.Item >Sair </Dropdown.Item>   
          </Dropdown.Menu>

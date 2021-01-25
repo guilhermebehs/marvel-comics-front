@@ -1,10 +1,13 @@
+import { CLEAN_FILTER } from './../types';
 import {ADD_COMICS_TO_SEND,REMOVE_COMICS_TO_SEND, 
         CLEAN_COMICS_TO_SEND, REFRESH_LIST,
+        FILTER,
         ComicTypes,ComicState} from '../types';
 
 const initialState: ComicState={
     comicsToSend:[],
     refreshList: false,
+    filter: ''
 }
 
 export default function comicReducers
@@ -39,6 +42,20 @@ export default function comicReducers
             return  {
             ...state,
             refreshList: !state.refreshList,
+        }
+        }
+        case FILTER: {
+
+            return  {
+            ...state,
+            filter: action.payload,
+        }
+        }
+        case CLEAN_FILTER: {
+
+            return  {
+            ...state,
+            filter: '',
         }
         } 
 

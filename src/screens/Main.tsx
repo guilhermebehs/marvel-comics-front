@@ -4,6 +4,7 @@ import TopBar from '../components/TopBar';
 import store from '../redux/store';
 import {Provider} from 'react-redux';
 import './Main.css';
+import Search from '../components/Search';
 
 
 type MyProps={};
@@ -19,7 +20,8 @@ export default class Main extends Component<MyProps, MyState>{
         return(
             <Provider store={store}>
               <div className="Main"> 
-                    <TopBar />     
+                    <TopBar />  
+                     <Search />   
                     <ComicList/>
                 </div>)
             </Provider>

@@ -29,12 +29,12 @@
 }
 
 .dropdown-menu a{
-    color: white !important;
+    color: white;
     margin: 5px;
 }
 
 .dropdown-menu a:first-child{
-    background-color: rgb(221, 209, 209);
+    background-color: rgb(41, 39, 39);
     margin: 0px;
 }
 
@@ -47,3 +47,4 @@
     border-bottom: 5px solid black;
     margin-left: 80%;
   }
+

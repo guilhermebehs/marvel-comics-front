@@ -36,11 +36,14 @@ export default class ComicsService {
     }
 
 
-    async getAll(limit:number=10,offset:number=0, orderBy="title"): Promise<Array<IComic>>{
+    async getAll(limit=10,offset=0, titleStartsWith: string): Promise<Array<IComic>>{
         
-       
+         const orderBy="title";
          const authParams = this.generateAuthParams();
          const params = {limit, offset,orderBy, ...authParams};
+         if(titleStartsWith && titleStartsWith.length > 0)
+            params['titleStartsWith'] = titleStartsWith;
+         console.log(params)
          let comics: Array<IComic>=[];
         
          try{
