@@ -1,16 +1,18 @@
 .modal-dialog-confirm{
-    margin-left: 8%;
     position: fixed;
-    background-color: white;
+    top: 30%;
+    right: 40%;
+    position: fixed;
+    border-radius: 5px;
+    background-color: rgb(179, 173, 173);
     padding: 15px;
-    width: 20%;
-    height: 15%;
+    width: 200px;
+    height: 90px;
     border: 1px solid black; 
-    transform: translate(-100%,   60%);
 }
 
-.closeButton{
-    background-color: white;
+.closeButton-send{
+    background-color: rgb(179, 173, 173);
     border: none;
     font-weight: bold;
     margin-left: 95%;

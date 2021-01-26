@@ -3,6 +3,7 @@
     flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
     width: 100%;
     background-color:rgb(41, 39, 39);
 }

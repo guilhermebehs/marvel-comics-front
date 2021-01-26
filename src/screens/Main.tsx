@@ -23,7 +23,7 @@ export default class Main extends Component<MyProps, MyState>{
                     <TopBar />  
                      <Search />   
                     <ComicList/>
-                </div>)
+                </div>
             </Provider>
         )
     }

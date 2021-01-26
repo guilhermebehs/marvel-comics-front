@@ -37,7 +37,7 @@ const ConfirmSendEmail = (props:Props)=>{
 
      return(
         <Modal.Dialog className="modal-dialog-confirm">
-           <button className="closeButton" onClick={()=> props.close()}>X</button>
+           <button className="closeButton-send" onClick={()=> props.close()}>X</button>
         <Modal.Body>
             <label>Email para envio</label>
             <input value={email} onChange={(e)=> setEmail(e.target.value)} type="text"></input>

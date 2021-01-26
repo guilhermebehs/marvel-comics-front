@@ -1,5 +1,5 @@
 .Main{
-    height: 120%;
+    height: 110%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,5 +7,10 @@
 
 }
 
+@media only screen and (min-width: 1600px) {
+    .Main {
+        height: 100%;
+    }
+  }
 
   

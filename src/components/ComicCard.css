@@ -1,6 +1,6 @@
 .card{
     margin-top:20px;
-    margin-left: 70px;
+    margin-left: 40px;
     margin-right: 70px;
     height: 200px;
     width: 120px;
@@ -8,6 +8,13 @@
     color: white;
 
 }
+
+@media only screen and (min-width: 1600px) {
+    .card {
+        margin-left: 60px;
+        margin-right: 90px;
+    }
+  }
 
 .title:hover, .image:hover{
     cursor: pointer;
