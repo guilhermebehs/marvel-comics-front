@@ -32,8 +32,9 @@ const Search = (props:Props) =>{
   
     return (
         <div className="Search">
-            <input value={filter} className="inputSearch" 
-                onChange={(e)=> setFilter(e.target.value)} type="text" />
+            <input value={filter} placeholder="Digite o título" 
+                className="inputSearch" type="text"
+                onChange={(e)=> setFilter(e.target.value)}  />
             <button onClick={()=> filterSearch()} 
                       disabled={filter.length === 0}
                       className="buttonSearch">Pesquisar</button>
